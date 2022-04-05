@@ -368,6 +368,28 @@ _./src/pages/login.styles.scss_
 
 ```
 
+Debido a que cada navegador te añade unos estilos diferentes a los elementos HTML, es necesario el uso de librerias del estilo de [normalize.css](https://necolas.github.io/normalize.css/).
+
+De momento vamos a hacerlo nosotros manualmente, actualizando los estilos comunes:
+
+_./src/core/content/css/styles.scss_
+
+```diff
+- body {
++ body,
++ p {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+```
+
 Por último, le damos los estilos al botón, tiene pinta de que los estilos de este botón se pueden mover a común, ya que se puede reutilizar para las demás páginas.
 De momento, lo declaramos aquí y más adelante empezamos a moverlo.
 
@@ -449,7 +471,7 @@ _./src/pages/login.styles.scss_
 
 +     &::before {
 +       content: '';
-+       background: url(../../core/content/img/secure_site.svg) no-repeat center
++       background: url('../../core/content/img/secure_site.svg') no-repeat center
 +         center;
 +       width: 20px;
 +       margin-right: 5px;
