@@ -207,14 +207,14 @@ _./src/pages/account-list.styles.scss_
     }
 
 +   & .user {
-+     color: white;
++     color: $palette-primary-contrast-text;
 +     display: flex;
 +     flex-direction: row;
 +     gap: 10px;
 
 +     &::before {
 +       content: '';
-+       background: url(../../core/content/img/icon-user.svg) no-repeat center
++       background: url('../../core/content/img/icon-user.svg') no-repeat center
 +         center;
 +       width: 20px;
 +     }
@@ -435,7 +435,7 @@ _./src/pages/account-list.styles.scss_
 +     font-size: 0.8rem;
 +   }
 
-+   & a {
++   & .iban > a {
 +     color: $palette-secondary-main;
 +     font-weight: 600;
 +   }

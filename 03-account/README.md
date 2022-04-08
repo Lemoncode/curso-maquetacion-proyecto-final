@@ -466,6 +466,42 @@ _./src/pages/account.styles.scss_
 
 ```
 
+Añadimos los estilos al botón para que quede alineado con los campos:
+
+_./src/pages/account.styles.scss_
+
+```diff
+...
+
++   $min-width-label: 300px;
++   $item-gap: 20px;
+
+    & .field-inline-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+-     gap: 20px;
++     gap: $item-gap;
+
+      & label {
+-       min-width: 300px;
++       min-width: $min-width-label;
+        text-align: right;
+      }
+
+      & .field {
+        max-width: 400px;
+      }
+      ...
+    }
+
++   & .submit-button {
++     margin-left: calc($min-width-label + $item-gap);
++   }
+...
+```
+
 Dejamos como ejercicio:
 
   - Sacar a común estilos `formulario`
